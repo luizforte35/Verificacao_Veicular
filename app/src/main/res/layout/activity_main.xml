@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Layout.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:background="@drawable/gradient_background"> <!-- Fundo branco -->
+
+        <!-- Título -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/verifica_o_veicular"
+            android:textSize="24sp"
+            android:textColor="@color/textDark"
+            android:gravity="center"
+            android:layout_gravity="center_horizontal"
+            android:paddingBottom="24dp" />
+
+        <!-- Botão Iniciar Verificação -->
+        <Button
+            android:id="@+id/iniciarVerificacaoButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/iniciar_verifica_o"
+            android:textColor="@android:color/white"
+            android:backgroundTint="@color/colorPrimary"
+            android:padding="16dp"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Botão Histórico -->
+        <Button
+            android:id="@+id/historicoButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/hist_rico"
+            android:textColor="@android:color/white"
+            android:backgroundTint="@color/colorPrimaryDark"
+            android:padding="16dp"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Botão Configurações -->
+        <Button
+            android:id="@+id/configuracoesButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/configura_es"
+            android:textColor="@android:color/white"
+            android:backgroundTint="@color/colorAccent"
+            android:padding="16dp" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

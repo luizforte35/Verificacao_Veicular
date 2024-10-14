@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Layout.Verificacao">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@mipmap/ic_launcher_foreground"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Título da Verificação -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:paddingBottom="16dp"
+                android:text="Inspeção Veicular"
+                android:textColor="@color/textDark"
+                android:textSize="24sp" />
+
+            <!-- Campo Placa do Veículo -->
+            <EditText
+                android:id="@+id/etPlaca"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:hint="Placa do veículo"
+                android:inputType="textCapCharacters"
+                android:padding="12dp"
+                android:textColor="@color/textDark"
+                android:textStyle="bold" />
+
+            <!-- Campo Modelo do Veículo -->
+            <EditText
+                android:id="@+id/etModelo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:hint="@string/modelo_do_ve_culo"
+                android:inputType="text"
+                android:padding="12dp"
+                android:textColor="@color/textDark"
+                android:textStyle="bold" />
+
+            <!-- Campo Ano do Veículo -->
+            <EditText
+                android:id="@+id/etAno"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:hint="@string/ano_do_ve_culo"
+
+                android:inputType="number"
+                android:padding="12dp"
+                android:textStyle="bold" />
+
+            <!-- Campo Observações -->
+            <EditText
+                android:id="@+id/etObservacoes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:hint="@string/observa_es_da_inspe_o"
+                android:inputType="textMultiLine"
+                android:lines="5"
+                android:padding="12dp"
+                android:textColor="@color/textDark" />
+
+
+            <!-- Botão de Submissão -->
+            <Button
+                android:id="@+id/btnIniciarINspecao"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/colorAccent"
+                android:padding="16dp"
+                android:text="@string/iniciar_inspe_o"
+                android:textColor="@android:color/white" />
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Verificacao_veicular</string>
+    <string name="verifica_o_veicular">Verificação Veicular</string>
+    <string name="iniciar_verifica_o">Iniciar Verificação</string>
+    <string name="hist_rico">Histórico</string>
+    <string name="configura_es">Configurações</string>
+    <string name="placa_do_veiculo">Placa do veículo</string>
+    <string name="modelo_do_ve_culo">Modelo do veículo</string>
+    <string name="ano_do_ve_culo">Ano do veículo</string>
+    <string name="observa_es_da_inspe_o">Observações da inspeção</string>
+    <string name="iniciar_inspe_o">Iniciar Inspeção</string>
+    <string name="foto_da_inspe_o">Foto da inspeção</string>
+    <string name="salvar_inspecao">Salvar Inspeção</string>
+    <string name="gerar_pdf">Gerar PDF</string>
+
+
+</resources>
