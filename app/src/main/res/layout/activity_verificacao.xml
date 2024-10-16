@@ -7,88 +7,109 @@
     android:layout_height="match_parent"
     tools:context=".Layout.Verificacao">
 
+    <!-- ScrollView para permitir rolagem, importante caso a tela não caiba em dispositivos menores -->
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@mipmap/ic_launcher_foreground"
         android:padding="16dp">
 
-        <LinearLayout
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/linearLayout"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:layout_height="wrap_content">
 
             <!-- Título da Verificação -->
             <TextView
+                android:id="@+id/textView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="16dp"
                 android:paddingBottom="16dp"
                 android:text="Inspeção Veicular"
                 android:textColor="@color/textDark"
-                android:textSize="24sp" />
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_chainStyle="packed" />
 
             <!-- Campo Placa do Veículo -->
             <EditText
                 android:id="@+id/etPlaca"
-                android:layout_width="match_parent"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="12dp"
+                android:layout_marginBottom="13dp"
                 android:hint="Placa do veículo"
                 android:inputType="textCapCharacters"
                 android:padding="12dp"
                 android:textColor="@color/textDark"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView" />
 
             <!-- Campo Modelo do Veículo -->
             <EditText
                 android:id="@+id/etModelo"
-                android:layout_width="match_parent"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="12dp"
-                android:hint="@string/modelo_do_ve_culo"
+                android:layout_marginBottom="13dp"
+                android:hint="Modelo do veículo"
                 android:inputType="text"
                 android:padding="12dp"
                 android:textColor="@color/textDark"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/etPlaca" />
 
             <!-- Campo Ano do Veículo -->
             <EditText
                 android:id="@+id/etAno"
-                android:layout_width="match_parent"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="12dp"
-                android:hint="@string/ano_do_ve_culo"
-
+                android:hint="Ano do veículo"
                 android:inputType="number"
                 android:padding="12dp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:textColor="@color/textDark"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/etModelo" />
 
             <!-- Campo Observações -->
             <EditText
                 android:id="@+id/etObservacoes"
-                android:layout_width="match_parent"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="16dp"
-                android:hint="@string/observa_es_da_inspe_o"
+                android:hint="Observações da inspeção"
                 android:inputType="textMultiLine"
-                android:lines="5"
+                android:minLines="5"
                 android:padding="12dp"
-                android:textColor="@color/textDark" />
-
+                android:textColor="@color/textDark"
+                android:textStyle="normal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/etAno" />
 
             <!-- Botão de Submissão -->
             <Button
-                android:id="@+id/btnIniciarINspecao"
-                android:layout_width="match_parent"
+                android:id="@+id/btnIniciarInspecao"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/colorAccent"
                 android:padding="16dp"
-                android:text="@string/iniciar_inspe_o"
-                android:textColor="@android:color/white" />
+                android:text="Iniciar Inspeção"
+                android:textColor="@android:color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/etObservacoes"
+                app:layout_constraintBottom_toBottomOf="parent" />
 
-        </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

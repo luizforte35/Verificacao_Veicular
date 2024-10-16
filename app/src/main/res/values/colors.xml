@@ -7,6 +7,10 @@
     <color name="backgroundLight">#FFFFFF</color> <!-- Fundo branco -->
     <color name="textDark">#212121</color> <!-- Texto preto -->
     <color name="textLight">#757575</color> <!-- Texto cinza claro -->
+    <color name="textColorPrimary">#212121</color> <!-- Cor do título -->
+    <color name="textColorSecondary">#757575</color> <!-- Cor da descrição -->
+    <color name="dividerColor">#BDBDBD</color> <!-- Cor da linha divisória -->
+
 </resources>
 
 

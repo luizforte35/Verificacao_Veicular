@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
             configuracoesButton = findViewById(R.id.configuracoesButton);
 
             iniciarVerificacaoButton.setOnClickListener(v -> {
-                Intent intent = new Intent(MainActivity.this, Verificacao.class);
+                Intent intent = new Intent(MainActivity.this, VerificacaoActivity.class);
                 startActivity(intent);
             });
 

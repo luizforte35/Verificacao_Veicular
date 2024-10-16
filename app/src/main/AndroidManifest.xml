@@ -13,7 +13,10 @@
         android:theme="@style/Theme.Verificacao_veicular"
         tools:targetApi="31">
         <activity
-            android:name=".Layout.Verificacao"
+            android:name=".Layout.Lista_Inspecao"
+            android:exported="false" />
+        <activity
+            android:name=".Layout.VerificacaoActivity"
             android:exported="false" />
         <activity
             android:name=".Layout.MainActivity"

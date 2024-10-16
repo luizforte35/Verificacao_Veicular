@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="12dp"
+    android:background="?attr/selectableItemBackground"
+    android:clickable="true"
+    android:focusable="true">
+
+    <!-- Ícone da inspeção -->
+    <ImageView
+        android:id="@+id/inspectionIcon"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:src="@drawable/ic_launcher_foreground"
+        android:contentDescription="Ícone da Inspeção"
+        android:scaleType="centerInside"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginEnd="12dp" />
+
+    <!-- Título da inspeção -->
+    <TextView
+        android:id="@+id/inspectionTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Inspeção de Freios"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@color/textColorPrimary"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/inspectionIcon"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="4dp"/>
+
+    <!-- Descrição da inspeção -->
+    <TextView
+        android:id="@+id/inspectionDescription"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Verifique o estado dos freios do veículo"
+        android:textSize="14sp"
+        android:textColor="@color/textColorSecondary"
+        app:layout_constraintTop_toBottomOf="@id/inspectionTitle"
+        app:layout_constraintStart_toStartOf="@id/inspectionTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="2dp"/>
+
+    <!-- Status de inspeção (opcional) -->
+    <TextView
+        android:id="@+id/inspectionStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Concluído"
+        android:textSize="12sp"
+        android:textStyle="italic"
+        android:textColor="@color/textLight"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginEnd="8dp"/>
+
+    <!-- Linha divisória -->
+    <View
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="@color/dividerColor"
+        app:layout_constraintTop_toBottomOf="@id/inspectionDescription"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="12dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
