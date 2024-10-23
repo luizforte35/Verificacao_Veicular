@@ -4,63 +4,61 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Layout.Lista_Inspecao">
+    tools:context=".Layout.Lista_Inspecao"
+    android:padding="16dp">
 
-    <!-- SearchView para filtrar a lista -->
-    <SearchView
-    android:id="@+id/searchView"
-    android:layout_width="0dp"
-    android:layout_height="wrap_content"
-    android:queryHint="Pesquisar inspeções"
-    android:background="@drawable/search_background"
-    android:iconifiedByDefault="false"
-    android:layout_margin="16dp"
-    app:layout_constraintTop_toTopOf="parent"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintEnd_toEndOf="parent"/>
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/searchView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/search_background"
+        android:iconifiedByDefault="false"
+        android:queryHint="Buscar Inspeções"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+    </androidx.appcompat.widget.SearchView>
 
-
-
-    <!-- RecyclerView para a lista de inspeções -->
+    <!-- RecyclerView para exibir a lista de inspeções -->
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        app:layout_constraintTop_toBottomOf="@id/searchView"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toTopOf="@id/btnVoltar"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toTopOf="@+id/buttonContainer"
-        android:layout_margin="16dp"
-        android:layout_marginTop="16dp"
-        tools:listitem="@layout/item_inspection"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/searchView"
+        tools:itemCount="5"
+        tools:itemLayout="@layout/item_inspecao"
+        tools:listitem="@layout/item_inspection" />
 
-    <!-- Botões para avançar e voltar -->
-    <LinearLayout
-        android:id="@+id/buttonContainer"
-        android:layout_width="match_parent"
+    <!-- Botão Voltar -->
+    <Button
+        android:id="@+id/btnVoltar"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
+        android:text="Voltar"
+        android:backgroundTint="@color/colorPrimaryDark"
+        android:textColor="@android:color/white"
+        android:layout_marginEnd="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/btnAvancar"
+        app:layout_constraintWidth_percent="0.45" />
+
+    <!-- Botão Avançar -->
+    <Button
+        android:id="@+id/btnAvancar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Avançar"
+        android:backgroundTint="@color/colorPrimary"
+        android:textColor="@android:color/white"
+        android:layout_marginStart="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/btnVoltar"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_margin="16dp">
-
-        <!-- Botão de voltar -->
-        <Button
-            android:id="@+id/btnVoltar"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Voltar"/>
-
-        <!-- Botão de avançar -->
-        <Button
-            android:id="@+id/btnAvancar"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Avançar"/>
-
-    </LinearLayout>
+        app:layout_constraintWidth_percent="0.45" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

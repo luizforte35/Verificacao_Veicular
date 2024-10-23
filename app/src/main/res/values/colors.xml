@@ -2,6 +2,7 @@
 
 <resources>
     <color name="colorPrimary">#2196F3</color> <!-- Azul forte para botões -->
+    <color name="colorSecondary">#03A9F4</color> <!-- Azul claro para botões" -->
     <color name="colorPrimaryDark">#1976D2</color>
     <color name="colorAccent">#FFC107</color> <!-- Amarelo para destaque -->
     <color name="backgroundLight">#FFFFFF</color> <!-- Fundo branco -->

@@ -13,6 +13,9 @@
         android:theme="@style/Theme.Verificacao_veicular"
         tools:targetApi="31">
         <activity
+            android:name=".Layout.DetalhesInspecaoActivity"
+            android:exported="false" />
+        <activity
             android:name=".Layout.Lista_Inspecao"
             android:exported="false" />
         <activity

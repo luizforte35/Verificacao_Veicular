@@ -6,9 +6,8 @@ import android.widget.Button;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
+import androidx.appcompat.app.AppCompatDelegate;
+
 
 import com.example.verificacao_veicular.R;
 
@@ -21,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
@@ -30,12 +30,9 @@ public class MainActivity extends AppCompatActivity {
             configuracoesButton = findViewById(R.id.configuracoesButton);
 
             iniciarVerificacaoButton.setOnClickListener(v -> {
-                Intent intent = new Intent(MainActivity.this, VerificacaoActivity.class);
+                Intent intent = new Intent(MainActivity.this, Lista_Inspecao.class);
                 startActivity(intent);
             });
-
-
-
 
 
     }//fim do onCreate

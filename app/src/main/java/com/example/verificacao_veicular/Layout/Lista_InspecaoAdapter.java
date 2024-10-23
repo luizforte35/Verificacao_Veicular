@@ -1,45 +1,60 @@
 package com.example.verificacao_veicular.Layout;
+
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.verificacao_veicular.R;
+
 import java.util.List;
 
 public class Lista_InspecaoAdapter extends RecyclerView.Adapter<Lista_InspecaoAdapter.ViewHolder> {
 
-    private List<String> inspectionList;
+    private List<String> inspecaoList;
+    private OnItemClickListener listener;
 
-    public Lista_InspecaoAdapter(List<String> inspectionList) {
-        this.inspectionList = inspectionList;
+    public Lista_InspecaoAdapter(List<String> inspecaoList, OnItemClickListener listener) {
+        this.inspecaoList = inspecaoList;
+        this.listener = listener;
     }
 
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(android.R.layout.simple_list_item_1, parent, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_inspecao, parent, false);
         return new ViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        holder.inspectionText.setText(inspectionList.get(position));
+        String inspecao = inspecaoList.get(position);
+        holder.bind(inspecao, listener);
     }
 
     @Override
     public int getItemCount() {
-        return inspectionList.size();
+        return inspecaoList.size();
     }
 
-    public static class ViewHolder extends RecyclerView.ViewHolder {
-        TextView inspectionText;
+    public class ViewHolder extends RecyclerView.ViewHolder {
+        private TextView inspecaoNome;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-            inspectionText = itemView.findViewById(android.R.id.text1);
+            inspecaoNome = itemView.findViewById(R.id.inspecaoNome);
+        }
+
+        public void bind(final String inspecao, final OnItemClickListener listener) {
+            inspecaoNome.setText(inspecao);
+            itemView.setOnClickListener(v -> listener.onItemClick(inspecao));
         }
     }
 
-
+    public interface OnItemClickListener {
+        void onItemClick(String item);
+    }
 }

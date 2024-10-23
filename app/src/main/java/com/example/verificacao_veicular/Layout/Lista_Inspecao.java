@@ -20,6 +20,7 @@ import java.util.List;
 public class Lista_Inspecao extends AppCompatActivity {
 
     private RecyclerView recyclerView;
+    private SearchView SearchView;
     private Lista_InspecaoAdapter adapter;
     private List<String> inspectionList;
     private List<String> filteredList;
@@ -32,7 +33,7 @@ public class Lista_Inspecao extends AppCompatActivity {
 
         // Inicializar Views
         recyclerView = findViewById(R.id.recyclerView);
-        SearchView searchView = findViewById(R.id.searchView);
+        SearchView  = findViewById(R.id.searchView);
         btnVoltar = findViewById(R.id.btnVoltar);
         btnAvancar = findViewById(R.id.btnAvancar);
 
@@ -43,43 +44,11 @@ public class Lista_Inspecao extends AppCompatActivity {
         inspectionList.add("Inspeção de Direção");
         inspectionList.add("Inspeção de Luzes");
         inspectionList.add("Inspeção de Pneus");
-        // Copiar a lista para uma lista filtrada inicialmente
-        filteredList = new ArrayList<>(inspectionList);
 
-        // Configurar o RecyclerView
-        recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        adapter = new Lista_InspecaoAdapter(filteredList);
-        recyclerView.setAdapter(adapter);
 
-        // Configurar o SearchView para filtrar as inspeções
-        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
-            @Override
-            public boolean onQueryTextSubmit(String query) {
-                return false;
-            }
 
-            @Override
-            public boolean onQueryTextChange(String newText) {
-                filter(newText);
-                return true;
-            }
-        });
 
-// Customizar o campo de texto
-        int searchTextId = searchView.getContext().getResources().getIdentifier("android:id/search_src_text", null, null);
-        TextView searchText = searchView.findViewById(searchTextId);
-        searchText.setTextColor(getResources().getColor(R.color.colorPrimary));
-        searchText.setHintTextColor(getResources().getColor(R.color.backgroundLight));
-
-// Customizar o ícone de lupa
-        int searchIconId = searchView.getContext().getResources().getIdentifier("android:id/search_mag_icon", null, null);
-        ImageView searchIcon = searchView.findViewById(searchIconId);
-        searchIcon.setColorFilter(getResources().getColor(R.color.textLight));
-
-// Remover a linha inferior padrão do SearchView
-        int plateId = searchView.getContext().getResources().getIdentifier("android:id/search_plate", null, null);
-        View searchPlate = searchView.findViewById(plateId);
-        searchPlate.setBackgroundColor(Color.TRANSPARENT);  // Remover linha de fundo
+        //inicia searchView
 
 
         // Ações dos botões Voltar e Avançar
@@ -94,19 +63,9 @@ public class Lista_Inspecao extends AppCompatActivity {
         });
     }
 
-    // Método para filtrar a lista de inspeções
-    private void filter(String text) {
-        filteredList.clear();
-        for (String item : inspectionList) {
-            if (item.toLowerCase().contains(text.toLowerCase())) {
-                filteredList.add(item);
-            }
-        }
-    }
 
 
 
 
 
 }
-
