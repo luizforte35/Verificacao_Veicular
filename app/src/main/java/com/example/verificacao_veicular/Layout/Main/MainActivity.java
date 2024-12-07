@@ -1,4 +1,4 @@
-package com.example.verificacao_veicular.Layout;
+package com.example.verificacao_veicular.Layout.Main;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,6 +9,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
 
 
+import com.example.verificacao_veicular.Layout.Inspecao.Lista_Inspecao;
 import com.example.verificacao_veicular.R;
 
 public class MainActivity extends AppCompatActivity {

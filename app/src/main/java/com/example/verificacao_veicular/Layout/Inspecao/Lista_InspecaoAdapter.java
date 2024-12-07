@@ -1,4 +1,4 @@
-package com.example.verificacao_veicular.Layout;
+package com.example.verificacao_veicular.Layout.Inspecao;
 
 import android.view.LayoutInflater;
 import android.view.View;

@@ -13,16 +13,16 @@
         android:theme="@style/Theme.Verificacao_veicular"
         tools:targetApi="31">
         <activity
-            android:name=".Layout.DetalhesInspecaoActivity"
+            android:name=".Layout.Inspecao.DetalhesInspecaoActivity"
             android:exported="false" />
         <activity
-            android:name=".Layout.Lista_Inspecao"
+            android:name=".Layout.Inspecao.Lista_Inspecao"
             android:exported="false" />
         <activity
-            android:name=".Layout.VerificacaoActivity"
+            android:name=".Layout.Inspecao.VerificacaoActivity"
             android:exported="false" />
         <activity
-            android:name=".Layout.MainActivity"
+            android:name=".Layout.Main.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

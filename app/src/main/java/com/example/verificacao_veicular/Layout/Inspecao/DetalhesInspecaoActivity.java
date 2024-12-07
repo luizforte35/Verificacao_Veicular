@@ -1,4 +1,4 @@
-package com.example.verificacao_veicular.Layout;
+package com.example.verificacao_veicular.Layout.Inspecao;
 
 import android.os.Bundle;
 import android.widget.TextView;

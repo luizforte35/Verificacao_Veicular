@@ -1,4 +1,4 @@
-package com.example.verificacao_veicular.Layout;
+package com.example.verificacao_veicular.Layout.Inspecao;
 
 public class Inspection {
     private String title;

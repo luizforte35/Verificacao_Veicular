@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Layout.VerificacaoActivity">
+    tools:context=".Layout.Inspecao.VerificacaoActivity">
 
     <!-- ScrollView para permitir rolagem, importante caso a tela não caiba em dispositivos menores -->
     <ScrollView
