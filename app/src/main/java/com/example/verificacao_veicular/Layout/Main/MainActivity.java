@@ -30,10 +30,13 @@ public class MainActivity extends AppCompatActivity {
             historicoButton = findViewById(R.id.historicoButton);
             configuracoesButton = findViewById(R.id.configuracoesButton);
 
+
             iniciarVerificacaoButton.setOnClickListener(v -> {
                 Intent intent = new Intent(MainActivity.this, Lista_Inspecao.class);
                 startActivity(intent);
             });
+
+
 
 
     }//fim do onCreate
